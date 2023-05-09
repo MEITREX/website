@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.background {
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+  }
+  
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meitrex-text {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.work-in-progress-text {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: -40px;
+}
+
+.icon-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+.icon-link {
+    margin: 0 20px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url(Quicksand.woff2) format('woff2');
+}
