@@ -1,3 +1,16 @@
+:root {
+    --transparent: oklch(0 0 0 / 0%);
+    --white-100: oklch(0.98 0 0);
+    --white-200: oklch(0.95 0 0);
+    --white-300: oklch(0.92 0 0);
+    --white-400: oklch(0.88 0 0);
+    --white-500: oklch(0.84 0 0);
+    --white-600: oklch(0.8 0 0);
+    --white-800: oklch(0.7 0 0);
+    --white-900: oklch(0.6 0 0);
+    --glow: 0 0 20px 5px oklch(0.98 0 0 / 80%);
+}
+
 body {
     background-color: black;
     font-family: 'Quicksand', sans-serif;
@@ -55,4 +68,46 @@ body {
 @font-face {
     font-family: 'Quicksand';
     src: url(Quicksand.woff2) format('woff2');
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  background: var(--white-900);
+  border: 3px solid;
+  border-color: var(--white-400);
+  border-radius: 0.75rem;
+  color: var(--white-300);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  transition: 250ms ease-in-out;
+  transition-property: all;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--white-200);
+  background-color: var(--white-800);
+  transform: scale(1.1);
+}
+
+.text {
+  filter: drop-shadow(0 0 1px currentcolor);
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.6;
+  border-radius: inherit;
+  box-shadow: 0 0 1em 0.5em var(--white-300);
+  transition: 250ms ease-in-out;
+  transition-property: opacity;
+}
+
+.button:hover::after,
+.button:focus::after {
+  opacity: 0.6;
 }
