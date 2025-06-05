@@ -73,6 +73,11 @@ body {
 .button {
   position: relative;
   z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-align: center;
   background: var(--white-900);
   border: 3px solid;
   border-color: var(--white-400);
@@ -102,7 +107,7 @@ body {
   inset: 0;
   opacity: 0.6;
   border-radius: inherit;
-  box-shadow: 0 0 1em 0.5em var(--white-300);
+  box-shadow: 0 0 1em 0.3em var(--white-300);
   transition: 250ms ease-in-out;
   transition-property: opacity;
 }
